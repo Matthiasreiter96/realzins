@@ -1,0 +1,77 @@
+[
+  {
+    "question": "Du hast anfang des Jahres 100€ am Konto, die Inflation betrug im selben Jahr 2%. Wie viel Geld hast du am Konto?",
+    "answers": ["98€", "100€", "102€", "96€"],
+    "correct": 1
+  },
+  {
+    "question": "Was ist ein ETF (Exchange Traded Fund)?",
+    "answers": [
+      "Ein passiver Investmentfonds, der einen Index abbildet",
+      "Eine Einzelaktie",
+      "Ein Zinsinstrument",
+      "Eine Art von Kryptowährung"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Wie hoch ist die Kapitalertragsteuer (KESt) auf Gewinne aus Aktien in Österreich?",
+    "answers": ["25%", "27,5%", "30%", "35,5%"],
+    "correct": 1
+  },
+  {
+    "question": "Welche dieser Anlageklassen gilt typischerweise als am risikoreichsten?",
+    "answers": ["Aktien", "Tagesgeld", "Immobilien", "Gold"],
+    "correct": 0
+  },
+  {
+    "question": "Welches Risiko wird mit Diversifikation reduziert?",
+    "answers": [
+      "Marktrisiko",
+      "Einzelwertrisiko",
+      "Währungsrisiko",
+      "Inflationsrisiko"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Was bedeutet 'Buy and Hold' als Anlagestrategie?",
+    "answers": [
+      "Aktien kaufen und sofort wieder verkaufen",
+      "Aktives Handeln an der Börse",
+      "Nur in sicheren Anlagen wie Staatsanleihen investieren",
+      "Langfristiges Halten von Anlagen unabhängig von Marktschwankungen"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Welcher der folgenden Indizes ist ein wichtiger Aktienindex in Österreich?",
+    "answers": ["DAX", "Dow Jones", "ATX", "S&P 500"],
+    "correct": 2
+  },
+  {
+    "question": "Welche dieser Anlageformen ist steuerfrei in Österreich?",
+    "answers": [
+      "Gewinne aus Kryptowährungen nach einer Haltedauer von über einem Jahr",
+      "Dividenden von österreichischen Aktien",
+      "Gewinne aus ETFs",
+      "Keine"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Was ist ein nachhaltiger Investmentansatz (ESG)?",
+    "answers": [
+      "Investieren in Unternehmen mit hohen Umwelt-, Sozial- und Governance-Standards",
+      "Investieren nur in staatliche Anleihen",
+      "Investieren ausschließlich in Aktien",
+      "Investieren ohne Berücksichtigung ethischer Standards"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Wie hoch ist die empfohlene Sparquote vom Einkommen für langfristiges Investieren?",
+    "answers": ["5-10%", "10-20%", "20-30%", "Mehr als 30%"],
+    "correct": 1
+  }
+]
