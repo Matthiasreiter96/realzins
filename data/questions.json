@@ -1,7 +1,7 @@
 [
   {
     "question": "Du hast anfang des Jahres 100€ am Konto, die Inflation betrug im selben Jahr 2%. Wie viel Geld hast du am Konto?",
-    "answers": ["98€", "100€", "102€", "96€"],
+    "answers": ["98€", "100€", "104€", "96€"],
     "correct": 1
   },
   {
