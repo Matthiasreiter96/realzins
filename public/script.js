@@ -11,13 +11,18 @@ fetch('/api/questions')
         loadQuestion();
     });
 
-// Ergebnisse laden und anzeigen
+// Ergebnisse laden, sortieren und anzeigen
 function loadResults() {
     fetch('/api/results')
         .then(res => res.json())
         .then(data => {
+            // Ergebnisse nach Punktestand sortieren (höchster zuerst)
+            data.sort((a, b) => b.score - a.score);
+
             const resultsContainer = document.querySelector('.results-container');
             const resultsTable = resultsContainer.querySelector('tbody');
+            
+            // Sortierte Ergebnisse in die Tabelle einfügen
             resultsTable.innerHTML = data
                 .map(result => `
                     <tr>
@@ -45,6 +50,7 @@ function loadQuestion() {
                     </li>
                 `).join('')}
             </ul>
+            <div id="feedback" class="feedback"></div>
             <div>
                 ${currentQuestionIndex > 0 ? '<button class="back" onclick="prevQuestion()">Zurück</button>' : ''}
                 <button class="forward" onclick="nextQuestion()">Weiter</button>
@@ -67,15 +73,35 @@ function nextQuestion() {
         return;
     }
 
-    userAnswers[currentQuestionIndex] = parseInt(selected.value);
-    if (userAnswers[currentQuestionIndex] === questions[currentQuestionIndex].correct) {
+    const userAnswer = parseInt(selected.value);
+    userAnswers[currentQuestionIndex] = userAnswer;
+
+    const feedback = document.getElementById('feedback');
+    if (userAnswer === questions[currentQuestionIndex].correct) {
         score++;
+        feedback.innerHTML = '<p style="color: green;">Richtig!</p>';
         triggerMoneyRain(); // Animation
+    } else {
+        feedback.innerHTML = `<p style="color: red;">Falsch! Die richtige Antwort ist: ${questions[currentQuestionIndex].answers[questions[currentQuestionIndex].correct]}</p>`;
     }
 
-    currentQuestionIndex++;
-    loadQuestion();
+    // Antworten markieren
+    document.querySelectorAll('input[name="answer"]').forEach((input, index) => {
+        const label = input.nextElementSibling;
+        if (index === questions[currentQuestionIndex].correct) {
+            label.style.color = 'green';
+        } else if (index === userAnswer) {
+            label.style.color = 'red';
+        }
+        input.disabled = true; // Verhindert weitere Änderungen
+    });
+
+    setTimeout(() => {
+        currentQuestionIndex++;
+        loadQuestion();
+    }, 2000); // Automatischer Übergang nach 2 Sekunden
 }
+
 
 // Vorherige Frage
 function prevQuestion() {
